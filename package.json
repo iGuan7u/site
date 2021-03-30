@@ -1,12 +1,12 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "iguan7u-site",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "hexo g && hexo s",
     "build": "hexo g",
     "clean": "hexo clean",
-    "deploy": "hexo d && rsync -r ./public/* reader.iguan7u.cn:/home/ubuntu/Workspace/nginx/www/blog"
+    "deploy": "hexo d && rsync -r ./public/* www.iguan7u.cn:/home/ubuntu/Workspace/nginx/www/blog"
   },
   "hexo": {
     "version": "4.2.1"
