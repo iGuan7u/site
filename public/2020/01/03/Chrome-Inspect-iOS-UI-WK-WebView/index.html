@@ -14,11 +14,9 @@
 
         
     
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    
     <link rel='stylesheet' href="/./css/dracula.css">
 
-    <meta name="generator" content="Hexo 4.2.1"></head>
+    <meta name="generator" content="Hexo 6.0.0"></head>
     <body>
         <header class="al_header al_pos_fixed">
     <div class="al_header_container dis_flex_jcenter">
@@ -56,44 +54,10 @@
 
             <div class="al_sidebar_author_info">
                 <h4>iGuan7u</h4>
-                <img class="al_sidebar_avatar" src="https://cdn.iguan7u.cn/image/avatar.jpg">
+                <img class="al_sidebar_avatar" src="https://yourAvatorURL">
                 <p>iOS 出身的小伙子，对 Objective-C、Swift、以及 Javascript 有浓厚的兴趣。热衷使用原生实现所有功能，厌恶一切的跨平台开发技术。喜欢分享工作过程中遇到的问题以及日常工作中遇到的新技术。希望这个博客能给你带来一点启发。</p>
             </div>
 
-            
-                <div class="al_sidebar_contact_info">
-                    <h4>GET IN TOUCH</h4>
-                    <p>期待与你的联系。</p>
-
-                    <div class="dis_flex al_sidebar_social_widget">
-                        
-                        
-
-                        
-                        
-
-                        
-                        
-
-                        
-                        
-                            <div class="al_social_icon_cnt" data_link="https://www.github.com/iGuan7u">
-                                <svg class="al_social_icon" id="github">
-                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_github"></use>
-                                </svg>
-                            </div>
-                        
-
-                        
-                        
-                            <div class="al_social_icon_cnt" data_link="https://www.twitter.com/iGuan7u/">
-                                <svg class="al_social_icon" id="twitter">
-                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_twitter"></use>
-                                </svg>
-                            </div>
-                        
-                    </div>
-                </div>
             
         </div>
     </div>
@@ -134,31 +98,31 @@
 
                 
                     <div class="al_page_content_outline">
-                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#被-Safari-支配的恐惧"><span class="toc-text">被 Safari 支配的恐惧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ios-webkit-debug-proxy"><span class="toc-text">ios-webkit-debug-proxy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖："><span class="toc-text">安装依赖：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装方法："><span class="toc-text">安装方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用方法："><span class="toc-text">使用方法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chrome-拯救世人"><span class="toc-text">Chrome 拯救世人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bug"><span class="toc-text">Bug</span></a></li></ol>
+                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A2%AB-Safari-%E6%94%AF%E9%85%8D%E7%9A%84%E6%81%90%E6%83%A7"><span class="toc-text">被 Safari 支配的恐惧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ios-webkit-debug-proxy"><span class="toc-text">ios-webkit-debug-proxy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%EF%BC%9A"><span class="toc-text">安装依赖：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">安装方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">使用方法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chrome-%E6%8B%AF%E6%95%91%E4%B8%96%E4%BA%BA"><span class="toc-text">Chrome 拯救世人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bug"><span class="toc-text">Bug</span></a></li></ol>
                     </div>
                 
 
                 
                 <section id="post-body">
                     <h2 id="被-Safari-支配的恐惧"><a href="#被-Safari-支配的恐惧" class="headerlink" title="被 Safari 支配的恐惧"></a>被 Safari 支配的恐惧</h2><p><img src="https://cdn.iguan7u.cn/image/safari_icon_240.png" alt="Safari_Icoon"><br>曾几何时，Safari 也是一个相当优秀的浏览器：启动迅速，资源占用少，能耗影响低，同时能跟 macOS 中其他的服务无缝的配合着：Keychain,  TouchID, handOff。即便全世界都高呼 Chrome 宇宙第一浏览器，笔者一直都是 Safari 的忠实用户，不离不弃。<br>可是不知道什么时候开始，Safari 也主打性能了，渲染速度、JavaScript 运行速度，都出现在了发布会 Keynote 上。普通用户对性能提升当然欢呼雀跃，可是对于经常不插电源使用 macBook 的笔者，我也慢慢留意到 Safari 开始频繁出现在<strong>使用大量能耗</strong>的应用列表上了。<br>当然，只是使用大量能耗，也谈不上恐惧。真正恐惧的，是作为一名 iOS 开发者，Safari 基本上是你离不开的工具，在调试 iOS 的 UIWebView、WKWebView、MobileSafari，Safari <strong>曾经</strong>是你唯一可靠的工具，而如今，添加 CSS 属性异常，Source 无法展示部分较大的 js 文件，甚至于 WebInspector 直接 Crash，弄得民怨沸腾的。</p>
-<h2 id="ios-webkit-debug-proxy"><a href="#ios-webkit-debug-proxy" class="headerlink" title="ios-webkit-debug-proxy"></a>ios-webkit-debug-proxy</h2><p><a href="https://github.com/google/ios-webkit-debug-proxy" target="_blank" rel="noopener">ios-webkit-debug-proxy</a> 是我在无意间划水 Github 时发现的一个代理工具，它借助于 <a href="https://github.com/libimobiledevice/usbmuxd" target="_blank" rel="noopener">usbmuxd</a> 工具所提供的功能，将调试命令发送到 iOS 设备的 com.apple.webinspector 服务中，从而达到不使用 Safari 调试 iOS WebView 的目的。</p>
+<h2 id="ios-webkit-debug-proxy"><a href="#ios-webkit-debug-proxy" class="headerlink" title="ios-webkit-debug-proxy"></a>ios-webkit-debug-proxy</h2><p><a target="_blank" rel="noopener" href="https://github.com/google/ios-webkit-debug-proxy">ios-webkit-debug-proxy</a> 是我在无意间划水 Github 时发现的一个代理工具，它借助于 <a target="_blank" rel="noopener" href="https://github.com/libimobiledevice/usbmuxd">usbmuxd</a> 工具所提供的功能，将调试命令发送到 iOS 设备的 com.apple.webinspector 服务中，从而达到不使用 Safari 调试 iOS WebView 的目的。</p>
 <p>借用项目中的示意图：</p>
-<p><img src="https://cdn.iguan7u.cn/image/ios-webkit-debug-proxy.png" alt=""></p>
+<p><img src="https://cdn.iguan7u.cn/image/ios-webkit-debug-proxy.png"></p>
 <h3 id="安装依赖："><a href="#安装依赖：" class="headerlink" title="安装依赖："></a>安装依赖：</h3><ul>
-<li><a href="http://brew.sh/" target="_blank" rel="noopener">homebrew</a></li>
+<li><a target="_blank" rel="noopener" href="http://brew.sh/">homebrew</a></li>
 </ul>
 <h3 id="安装方法："><a href="#安装方法：" class="headerlink" title="安装方法："></a>安装方法：</h3><blockquote>
 <p>为了避免出现 <code>Could not connect to lockdownd, error code -&lt;number&gt;. Exiting.</code> 错误，建议不要直接 <code>brew install ios-webkit-debug-proxy</code> 安装。  </p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">: brew update</span></span><br><span class="line"><span class="meta">$</span><span class="bash">: brew uninstall --force libimobiledevice ios-webkit-debug-proxy usbmuxd</span></span><br><span class="line"><span class="meta">$</span><span class="bash">: brew install --HEAD usbmuxd</span></span><br><span class="line"><span class="meta">$</span><span class="bash">: brew install --HEAD libimobiledevice</span></span><br><span class="line"><span class="meta">$</span><span class="bash">: brew install -s ios-webkit-debug-proxy</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="language-bash">: brew update</span><br><span class="hljs-meta">$</span><span class="language-bash">: brew uninstall --force libimobiledevice ios-webkit-debug-proxy usbmuxd</span><br><span class="hljs-meta">$</span><span class="language-bash">: brew install --HEAD usbmuxd</span><br><span class="hljs-meta">$</span><span class="language-bash">: brew install --HEAD libimobiledevice</span><br><span class="hljs-meta">$</span><span class="language-bash">: brew install -s ios-webkit-debug-proxy</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">: ios-webkit-debug-proxy</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h3><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="language-bash">: ios-webkit-debug-proxy</span><br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <p>ios-webkit-debug-proxy 默认使用 9221 端口，然后从 9222-9322 会递增地分配给每一台连接成功的 iOS 设备。  </p>
 </blockquote>
 <p>连接电脑后，确认已经通过 iTunes 信任设备后，Terminal 会显示出设备名以及对应的端口号，或者直接打开 <a href="h">localhost:9221</a> 查看连接设备列表。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">: ios-webkit-debug-proxy</span></span><br><span class="line">Listing devices on :9221</span><br><span class="line">Connected :9222 to “iGuan7u” iPad (aaaaaaaaaaaaaaaaaaaaaaaaaab7e05)</span><br><span class="line">Disconnected :9222 from “iGuan7u”  iPad (aaaaaaaaaaaaaaaaaaaaaaaaaab7e05)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="language-bash">: ios-webkit-debug-proxy</span><br>Listing devices on :9221<br>Connected :9222 to “iGuan7u” iPad (aaaaaaaaaaaaaaaaaaaaaaaaaab7e05)<br>Disconnected :9222 from “iGuan7u”  iPad (aaaaaaaaaaaaaaaaaaaaaaaaaab7e05)<br></code></pre></td></tr></table></figure>
 
 <h2 id="Chrome-拯救世人"><a href="#Chrome-拯救世人" class="headerlink" title="Chrome 拯救世人"></a>Chrome 拯救世人</h2><p>当然，我们的目的不是启动 ios-webkit-debug-proxy 来查看 iOS 的设备名以及 UUID 的，而是希望脱离 Safari 的魔爪，奔向自由的 Chrome DevTool。</p>
 <ol>
@@ -168,26 +132,13 @@
 <li>输入上面展示的设备端口地址：<code>localhost:9222</code> ，点击 <code>done</code> 按钮</li>
 <li>在页面的 Remote Target 中即可看到你连入的设备了，开始你的调试吧～</li>
 </ol>
-<p>不过 Inspect 页面可能没有直接展示 WebView 的截屏，这里可以使用另外一个开源工具 <a href="https://github.com/RemoteDebug/remotedebug-ios-webkit-adapter" target="_blank" rel="noopener">RemoteDebug iOS WebKit Adapter</a>，这个使用 ios-webkit-debug-proxy 做底层的一个工具。</p>
+<p>不过 Inspect 页面可能没有直接展示 WebView 的截屏，这里可以使用另外一个开源工具 <a target="_blank" rel="noopener" href="https://github.com/RemoteDebug/remotedebug-ios-webkit-adapter">RemoteDebug iOS WebKit Adapter</a>，这个使用 ios-webkit-debug-proxy 做底层的一个工具。</p>
 <h2 id="Bug"><a href="#Bug" class="headerlink" title="Bug"></a>Bug</h2><p>笔者自测，在 iOS13 中，inspect 页面似乎没有正确展示 Element 等信息，Console Tab 也没有打出任何日志信息，估计是工具的问题，期待后期 Google 方（没错，这个工具是 Google 的～）的解决吧。</p>
 
                 </section>
 
                 
                 
-    <div id="al_gitalk_cnt" />
-    <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <script>
-        var gitalk = new Gitalk({
-            clientID: "065e38d669f0fa5bff9b",
-            clientSecret: "2440e8baec3aec1410a09c994bfb9d53891e04b4",
-            repo: "iguan7u.github.io",
-            owner: "iGuan7u",
-            admin: "iGuan7u",
-            id: "Chrome Inspect iOS (UI/WK)WebView",
-        });
-        gitalk.render("al_gitalk_cnt")
-    </script>
 
                 
 
@@ -223,16 +174,12 @@
 
     
     
-        <div class="al_index_footer_item" onclick="window.open('http://www.beian.miit.gov.cn')")>
-            粤ICP备16128736号-2
-        </div>
-    
 
     <div class="al_index_footer_item al_index_footer_extra">
         Created By 
-        <a href="https://github.com/iGuan7u/Acetolog" target="_blank" rel="noopener">AcetoLog</a>
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
          · Power By 
-        <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
     </div>
 
     <div class="al_index_footer_item al_index_footer_extra_right">
@@ -242,13 +189,11 @@
 
         <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
         
-    <script src="//pingjs.qq.com/h5/stats.js?v2.0.4"
-        name=MTAH5
-        sid=500681628></script>
+        
+        
+        
+        
 
-        
-        
-        
     </body>
 </html>
         

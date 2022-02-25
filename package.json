@@ -6,26 +6,23 @@
     "dev": "hexo g && hexo s",
     "build": "hexo g",
     "clean": "hexo clean",
-    "deploy": "hexo d && rsync -r ./public/* Tencent-GZ-2C8G:/home/ubuntu/Workspace/nginx/www/blog",
+    "deploy": "hexo d && rsync -r ./public/* Tencent-GZ-2C4G:/home/ubuntu/Workspace/nginx/www/blog",
     "themePull": "git subtree pull  --prefix=themes/Acetolog-hexo git@github.com:iGuan7u/Acetolog.git private_info --squash"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "6.0.0"
   },
   "dependencies": {
-    "hexo": "^4.2.0",
+    "hexo": "^6.0.0",
     "hexo-auto-excerpt": "^1.1.2",
-    "hexo-deployer-git": "^2.1.0",
+    "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
-    "hexo-generator-index": "^1.0.0",
+    "hexo-generator-index": "^2.0.0",
     "hexo-generator-tag": "^1.0.0",
-    "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-marked": "^2.0.0",
-    "hexo-renderer-pug": "1.0.0",
-    "hexo-renderer-sass": "^0.4.0",
-    "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0",
+    "hexo-renderer-marked": "^5.0.0",
+    "hexo-renderer-stylus": "^2.0.1",
+    "hexo-server": "^3.0.0",
     "hexo-wordcount": "^6.0.1"
   }
 }

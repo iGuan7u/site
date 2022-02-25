@@ -14,11 +14,9 @@
 
         
     
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    
     <link rel='stylesheet' href="/./css/dracula.css">
 
-    <meta name="generator" content="Hexo 4.2.1"></head>
+    <meta name="generator" content="Hexo 6.0.0"></head>
     <body>
         <header class="al_header al_pos_fixed">
     <div class="al_header_container dis_flex_jcenter">
@@ -56,44 +54,10 @@
 
             <div class="al_sidebar_author_info">
                 <h4>iGuan7u</h4>
-                <img class="al_sidebar_avatar" src="https://cdn.iguan7u.cn/image/avatar.jpg">
+                <img class="al_sidebar_avatar" src="https://yourAvatorURL">
                 <p>iOS 出身的小伙子，对 Objective-C、Swift、以及 Javascript 有浓厚的兴趣。热衷使用原生实现所有功能，厌恶一切的跨平台开发技术。喜欢分享工作过程中遇到的问题以及日常工作中遇到的新技术。希望这个博客能给你带来一点启发。</p>
             </div>
 
-            
-                <div class="al_sidebar_contact_info">
-                    <h4>GET IN TOUCH</h4>
-                    <p>期待与你的联系。</p>
-
-                    <div class="dis_flex al_sidebar_social_widget">
-                        
-                        
-
-                        
-                        
-
-                        
-                        
-
-                        
-                        
-                            <div class="al_social_icon_cnt" data_link="https://www.github.com/iGuan7u">
-                                <svg class="al_social_icon" id="github">
-                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_github"></use>
-                                </svg>
-                            </div>
-                        
-
-                        
-                        
-                            <div class="al_social_icon_cnt" data_link="https://www.twitter.com/iGuan7u/">
-                                <svg class="al_social_icon" id="twitter">
-                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_twitter"></use>
-                                </svg>
-                            </div>
-                        
-                    </div>
-                </div>
             
         </div>
     </div>
@@ -140,26 +104,26 @@
 
                 
                 <section id="post-body">
-                    <h2 id="What-is-asar"><a href="#What-is-asar" class="headerlink" title="What is asar?"></a>What is asar?</h2><p><a href="https://github.com/electron/asar" target="_blank" rel="noopener">asar</a> —— 官方并没有明确给出简称的来源，笔者个人认为是 A Simple Archive，实际上，文档中也着重表达了这个格式只是属于简单的文件归档，因此笔者认为这个称呼也是挺合理的。:)  Electron 中提供了这个格式，在构建应用时将执行资源打包到一个 .asar 文件中，应用启动执行时直接访问 .asar 文件内部资源获取执行代码。在使用 <a href="https://github.com/electron-userland/electron-packager" target="_blank" rel="noopener">Electron Packager</a> 或者 <a href="https://github.com/electron-userland/electron-builder" target="_blank" rel="noopener">Electron Builder</a> 等构建工具时，都会默认开启 .asar 归档模式。</p>
+                    <h2 id="What-is-asar"><a href="#What-is-asar" class="headerlink" title="What is asar?"></a>What is asar?</h2><p><a target="_blank" rel="noopener" href="https://github.com/electron/asar">asar</a> —— 官方并没有明确给出简称的来源，笔者个人认为是 A Simple Archive，实际上，文档中也着重表达了这个格式只是属于简单的文件归档，因此笔者认为这个称呼也是挺合理的。:)  Electron 中提供了这个格式，在构建应用时将执行资源打包到一个 .asar 文件中，应用启动执行时直接访问 .asar 文件内部资源获取执行代码。在使用 <a target="_blank" rel="noopener" href="https://github.com/electron-userland/electron-packager">Electron Packager</a> 或者 <a target="_blank" rel="noopener" href="https://github.com/electron-userland/electron-builder">Electron Builder</a> 等构建工具时，都会默认开启 .asar 归档模式。</p>
 <p>asar 属于一种将多个文件打包合并的文件，类似于 Linux 中的 tar 格式文件，Windows 中的 zip, rar 格式文件，然而不同于上面类比的格式，asar 属于无压缩类型的，也没有经过加密处理的，所有包含的文件的二进制数据都直接添加到 .asar 文件中，该文件头部包含一个 JSON 格式的字符串，记录其中包含的文件结构以及所有文件的起始位置以及文件长度：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="attr">"files"</span>: &#123;				<span class="comment">// 文件结构起始位置</span></span><br><span class="line">      <span class="attr">"tmp"</span>: &#123;			<span class="comment">// 其中包含了一个 tmp 文件夹</span></span><br><span class="line">         <span class="attr">"files"</span>: &#123;&#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">"usr"</span> : &#123;			<span class="comment">// 其中包含了一个 files 文件夹</span></span><br><span class="line">         <span class="attr">"files"</span>: &#123;</span><br><span class="line">           <span class="attr">"bin"</span>: &#123;		<span class="comment">// files 文件夹中存在 bin 文件夹</span></span><br><span class="line">             <span class="attr">"files"</span>: &#123;</span><br><span class="line">               <span class="attr">"ls"</span>: &#123;	<span class="comment">// bin 文件夹有一个 ls 文件</span></span><br><span class="line">                 <span class="attr">"offset"</span>: <span class="string">"0"</span>,	<span class="comment">// 文件起始位置 为 0</span></span><br><span class="line">                 <span class="attr">"size"</span>: <span class="number">100</span>,		<span class="comment">// 文件大小是 100</span></span><br><span class="line">                 <span class="attr">"executable"</span>: <span class="literal">true</span>	<span class="comment">// 该文件可以被执行</span></span><br><span class="line">               &#125;</span><br><span class="line">             &#125;</span><br><span class="line">           &#125;</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>   <span class="hljs-attr">&quot;files&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span>				<span class="hljs-comment">// 文件结构起始位置</span><br>      <span class="hljs-attr">&quot;tmp&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span>			<span class="hljs-comment">// 其中包含了一个 tmp 文件夹</span><br>         <span class="hljs-attr">&quot;files&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-punctuation">&#125;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;usr&quot;</span> <span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span>			<span class="hljs-comment">// 其中包含了一个 files 文件夹</span><br>         <span class="hljs-attr">&quot;files&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>           <span class="hljs-attr">&quot;bin&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span>		<span class="hljs-comment">// files 文件夹中存在 bin 文件夹</span><br>             <span class="hljs-attr">&quot;files&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>               <span class="hljs-attr">&quot;ls&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span>	<span class="hljs-comment">// bin 文件夹有一个 ls 文件</span><br>                 <span class="hljs-attr">&quot;offset&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;0&quot;</span><span class="hljs-punctuation">,</span>	<span class="hljs-comment">// 文件起始位置 为 0</span><br>                 <span class="hljs-attr">&quot;size&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">100</span><span class="hljs-punctuation">,</span>		<span class="hljs-comment">// 文件大小是 100</span><br>                 <span class="hljs-attr">&quot;executable&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>	<span class="hljs-comment">// 该文件可以被执行</span><br>               <span class="hljs-punctuation">&#125;</span><br>             <span class="hljs-punctuation">&#125;</span><br>           <span class="hljs-punctuation">&#125;</span><br>         <span class="hljs-punctuation">&#125;</span><br>      <span class="hljs-punctuation">&#125;</span><br>   <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
 
 <p>通过这个 JSON 头部的字符串能够完全解析出 .asar 中包含的文件以及目录结构等信息。</p>
 <h2 id="Why-use-it"><a href="#Why-use-it" class="headerlink" title="Why use it?"></a>Why use it?</h2><p>在 Windows 系统中，文件路径默认使用 256 位的字符串存储，因此在资源文件路径过深，或者资源父级文件夹名过长的情况下，就会出现资源访问失败的问题。当然这个问题能够通过修改系统注册列表去增加文件路径的长度，可是作为一个应用程序需要用户修改系统设置才能正常使用，这个是极其不合理的。因此 Electron 提出了将所有执行资源归档到一个 .asar 文件中的解决方案，.asar 文件会保留原来资源的层级结构，逻辑代码既能够无需额外修改，也能解决 Windows 中可能出现层级过深导致的执行失败问题。</p>
 <p>除此之外，引入 .asar 格式能加快 require 访问的速度。原因是，如果使用的是独立的文件，在 require 中需要根据路径访问文件系统中对应的位置，然后在从磁盘中读取其中的内容，而 .asar 只需要根据文件路径获取到文件的偏移位置 offset 以及文件长度 size，就可以直接从其中获取文件的具体信息。一来只需要保持一个文件的读状态，无需同时读取多个文件，二来还能加快其访问速度。</p>
-<p>最后一点，文档中也提到，引入 .asar 文件，能够隐藏项目开发的源代码。然而笔者认为，这个打包归档对于隐藏项目代码没有任何作用，正如前文所说，asar 属于无压缩无加密的归档类型，有意解包者能轻松导出获取其中的内容。对于隐藏项目代码，建议还是使用 <a href="http://lisperator.net/uglifyjs/" target="_blank" rel="noopener">UglifyJS</a> 等代码混淆工具。</p>
+<p>最后一点，文档中也提到，引入 .asar 文件，能够隐藏项目开发的源代码。然而笔者认为，这个打包归档对于隐藏项目代码没有任何作用，正如前文所说，asar 属于无压缩无加密的归档类型，有意解包者能轻松导出获取其中的内容。对于隐藏项目代码，建议还是使用 <a target="_blank" rel="noopener" href="http://lisperator.net/uglifyjs/">UglifyJS</a> 等代码混淆工具。</p>
 <h2 id="How-do-use-it"><a href="#How-do-use-it" class="headerlink" title="How do use it?"></a>How do use it?</h2><p>首先一点，建议通过 Electron-Builder 或者 Electron-Packager 等构建工具，开箱即用，相当方便。</p>
 <p>全局安装 asar，或者通过 npx 命令执行：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 全局安装 asar</span><br><span class="line">$: npm install -g asar</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext"># 全局安装 asar<br>$: npm install -g asar<br></code></pre></td></tr></table></figure>
 
 <p>使用 asar 打包资源文件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$: asar pack your-app-resource-folder app.asar</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">$: asar pack your-app-resource-folder app.asar<br></code></pre></td></tr></table></figure>
 
 <p>将打包资源放到指定路径：<br>    macOS 中默认放入  <code>electron/Electron.app/Contents/Resources/app.asar</code><br>    Windows 和 Linux 默认放入  <code>electron/resources/app.asar</code></p>
 <h2 id="Other-Questions"><a href="#Other-Questions" class="headerlink" title="Other Questions"></a>Other Questions</h2><p>Q: <strong>Electron 是怎么读取 asar 文件的？</strong><br>A：Electron 中使用了其自定义的 <code>fs</code> <code>require</code> 等模块，在遇到 asar 文件时，会自动将其解析成一个虚拟的文件夹，然后直接获取其中的文件内容。</p>
 <p>Q：<strong>如何获取 asar 文件的属性？</strong><br>A：可能在运行过程中，会遇到需要获取 asar 文件属性需求（如计算 app.asar MD5 值，确保应用程序没有被他人篡改）时，需要忽略 asar 虚拟文件夹的功能，这个时候可以引入 <code>original-fs</code> 模块，该模块是 node.js 中原生的模块，对于 asar 没有提供额外的解析功能。</p>
 <p>Q：<strong>如何解包 asar 文件？</strong><br>A：解包 asar 可以分析 Electron 应用中的打包资源，可以查处应用包含了哪些不需要引入的资源，减少应用包的大小。解包操作同样是通过全局安装的 asar 工具即可：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">: asar extract app.asar dest_path</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="language-bash">: asar extract app.asar dest_path</span><br></code></pre></td></tr></table></figure>
 
 <p>更多的 asar 工具命令，可以通过 <code>asar --help</code> 命令查看。</p>
 <p>Enjoy it.</p>
@@ -168,19 +132,6 @@
 
                 
                 
-    <div id="al_gitalk_cnt" />
-    <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <script>
-        var gitalk = new Gitalk({
-            clientID: "065e38d669f0fa5bff9b",
-            clientSecret: "2440e8baec3aec1410a09c994bfb9d53891e04b4",
-            repo: "iguan7u.github.io",
-            owner: "iGuan7u",
-            admin: "iGuan7u",
-            id: "Electron asar 格式详解",
-        });
-        gitalk.render("al_gitalk_cnt")
-    </script>
 
                 
 
@@ -216,16 +167,12 @@
 
     
     
-        <div class="al_index_footer_item" onclick="window.open('http://www.beian.miit.gov.cn')")>
-            粤ICP备16128736号-2
-        </div>
-    
 
     <div class="al_index_footer_item al_index_footer_extra">
         Created By 
-        <a href="https://github.com/iGuan7u/Acetolog" target="_blank" rel="noopener">AcetoLog</a>
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
          · Power By 
-        <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
     </div>
 
     <div class="al_index_footer_item al_index_footer_extra_right">
@@ -235,13 +182,11 @@
 
         <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
         
-    <script src="//pingjs.qq.com/h5/stats.js?v2.0.4"
-        name=MTAH5
-        sid=500681628></script>
+        
+        
+        
+        
 
-        
-        
-        
     </body>
 </html>
         
