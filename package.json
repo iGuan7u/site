@@ -6,7 +6,7 @@
     "dev": "hexo g && hexo s",
     "build": "hexo g",
     "clean": "hexo clean",
-    "deploy": "hexo d && rsync -r ./public/* Tencent-GZ-2C4G:/home/ubuntu/Workspace/nginx/www/blog",
+    "deploy": "hexo d && rsync -r ./public/* Tencent-2C4G-GZ:/home/ubuntu/Workspace/nginx/www/blog",
     "themePull": "git subtree pull  --prefix=themes/Acetolog-hexo git@github.com:iGuan7u/Acetolog.git private_info --squash"
   },
   "hexo": {
